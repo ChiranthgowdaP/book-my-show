@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+     
+    <title>book my show</title>
+
+</head>
+<body>
+    <div class ="firstheader">
+        <img src="static/book.png" id="logo">
+        <input type="text" id="sbar" placeholder="      search for movie,events,sportrs and activity">
+        <span class="material-symbols-outlined" id="sicon">
+        search
+        </span>
+        <select id="dropdown"><option>Bengaluru</option></select>
+        <button id="sbtn">signin</button>
+        <span class="material-symbols-outlined" id="micon">
+        menu
+        </span>
+    </div>
+    <div class="secondheader">
+        <ul type="none" id="sec">
+            <li><a href="movies">Movies</a></li>
+            <li><a href="sports">Sports</a></li>
+            <li><a href="stream">Stream</a></li>
+            <li><a href="events">Events</a></li>
+            <li><a href="plays">Plays</a></li>
+            <li><a href="activities">Activities</a></li>
+        </ul>
+        <ul type="none" id="thi">
+            <li><a href="listyourshow">listyourshow</a></li>
+            <li><a href="cooperstes">cooperstes</a></li>
+            <li><a href="offers">offers</a></li>
+               <li><a href="giftcards">giftcards</a></li>
+            
+            
+        </ul>
+    </div>
+    <div class="slideshow-container">
+        <div class="slide active">
+            <img src="static/front1.avif">
+        </div>
+        <div class="slide">
+            <img src="static/q.avif">
+        </div>
+        <div class="slide">
+            <img src="static/qq.avif">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <div id ="fourt">
+        <h2 id="mo"> Recomended Movies</h2>
+        <a id ="ss" href="See All">See All></a>
+    </div>
+
+     <div id ="ffront"> 
+        <img src="static/1.avif" id="lii">
+        <img src="static/2.avif" id="kii">
+        <img src="static/3.avif" id="jii">
+        <img src="static/4.avif" id="hii">
+        <img src="static/5.avif" id="gii">
+    </div><br>
+    <div id ="paraa">
+        <p id><b>De De Pyaar De 2</b><br>
+             comedy/family/romantic</p>
+        <p id><b>Kaantha</b><br>
+             drama/romantic</p>
+        <p id><b>The Girlfriend</b><br>
+             drama/thriller</p>
+        <p id><b>Gathha Vibhava</b><br>
+             comedy/family/romantic</p>
+        <p id><b>braat</b><br>
+             crime/family/romantic</p>
+    </div>
+    <div id="rr">
+         <img src="static/rr.avif" id="rrr">
+
+    </div>
+     <div id ="fffront"> 
+        <img src="static/11.avif" id="lii">
+        <img src="static/12.avif" id="kii">
+        <img src="static/13.avif" id="jii">
+        <img src="static/14.avif" id="hii">
+        <img src="static/15.avif" id="gii">
+    </div><br>
+    <div id="live">
+        <h4>The Best Of Live Events</h4>
+    </div>
+    <div id="gap">
+        
+    </div>
+
+      <div id ="dd"> 
+        <img src="static/DD.avif" id="ddd">
+
+    </div>
+       </div>
+     <div id ="FFF"> 
+        <img src="static/DD1.avif" id="lii">
+        <img src="static/DD2.avif" id="kii">
+        <img src="static/DD3.avif" id="jii">
+       
+    </div><br>
+    <div id ="paraaa">
+        <p id><b>Caught Stealing</b></p>
+        <p id><b>One Battle </b></p>
+        <p id><b>Ariella</b></p>
+    </div>
+
+    <div id ="ffourt">
+    <h2 id="mmo"> Recomended Shows</h2>
+    </div>
+    
+     <div id ="ffffront"> 
+        <img src="static/a.avif" id="lii">
+        <img src="static/s.avif" id="kii">
+        <img src="static/d.avif" id="jii">
+        <img src="static/f.avif" id="hii">
+        <img src="static/g.avif" id="gii">
+    </div><br>
+ 
+
+    <div id ="screen">
+        <img src="static/screen.png">
+    </div>
+
+    <!-- Login Popup -->
+    <div class="popup">
+        <div class="closs-btn">&times;</div>
+        <h2><center>log in</center></h2>
+        <form action="#" method="post">
+            <div class="form-element">
+                <label for="email">email</label>
+                <input type="email" name="" id="email" placeholder="enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">password</label>
+                <input type="password" name="" id="password" placeholder="*  *   *   *">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div> 
+            <div class="form-element">
+                <input type="submit" value="submit">
+            </div>
+            <div class="form-element">
+                <a href="#">forgot password?</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="slideshow.js"></script>
+    <script>
+        let sign_login = document.querySelector("#sbtn");
+        let popup = document.querySelector(".popup");
+        let close_btn = document.querySelector(".closs-btn");
+
+        sign_login.addEventListener("click", () => {
+            popup.classList.add("active");
+        });
+
+        close_btn.addEventListener("click", () => {
+            popup.classList.remove("active");
+        });
+    </script>
+</body>
+</html>
